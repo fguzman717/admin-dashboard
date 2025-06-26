@@ -2,4 +2,27 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f3f3f3;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.sidebar,
+.main-container {
+  height: 100vh;
+}
+
+.sidebar {
+  order: 0;
+  background-color: #50a7ff;
+}
+
+.main-container {
+  order: 1;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
