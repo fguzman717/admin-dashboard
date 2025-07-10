@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
   display: flex;
 }
 
@@ -53,6 +54,10 @@ body {
   width: 3rem;
 }
 
+.dashboard-logo {
+  cursor: pointer;
+}
+
 .main-options-grid,
 .secondary-options-grid {
   grid-template-columns: auto 1fr;
@@ -69,6 +74,12 @@ body {
 
 .option {
   align-self: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.option:hover {
+  transform: scale(1.05);
 }
 
 /* Main Section */
@@ -169,7 +180,7 @@ body {
 }
 
 .greeting div {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 800;
 }
 
@@ -190,19 +201,20 @@ body {
 /* Content Section */
 /* Projects */
 .content-grid {
+  height: 100vh;
   display: grid;
-  padding: 20px;
+  padding: 2rem;
   background-color: #eeeeee;
 }
 
 .pat-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 20px;
 }
 
 .main-grid {
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .main-grid h3,
@@ -212,8 +224,8 @@ body {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .project-cards {
@@ -224,6 +236,11 @@ body {
   border-left: 8px solid green;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  transition: transform 0.3s;
+}
+
+.project-cards:hover {
+  transform: scale(1.05);
 }
 
 .card-content div {
@@ -249,8 +266,9 @@ body {
 /* Announcements & Trending */
 .side-grid {
   display: grid;
-  padding: 10px;
-  gap: 1.5rem;
+  grid-template-rows: repeat(2, minmax(100px, 250px));
+  padding: 0 10px;
+  gap: 20px;
 }
 
 .announcements,
@@ -261,19 +279,50 @@ body {
   padding: 20px;
 }
 
+.announcements,
+.trending {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.announcements::-webkit-scrollbar,
+.trending::-webkit-scrollbar {
+  width: 8px;
+}
+
+.announcements::-webkit-scrollbar-thumb,
+.trending::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.announcements::-webkit-scrollbar-track,
+.trending::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.announcement-grid {
+  margin-bottom: 20px;
+}
+
 .single-announcement div {
   padding-top: 5px;
   font-size: 12px;
   color: grey;
 }
 
+.single-announcement:first-child {
+  padding: 0 0.5rem 10px;
+}
+
 .single-announcement {
-  padding: 1rem 0.5rem;
+  padding: 10px 0.5rem;
   border-bottom: 1px solid #ccc;
 }
 
 .single-announcement:last-child {
   border-bottom: none;
+  padding: 10px 0.5rem 0px;
 }
 
 .trending {
@@ -296,6 +345,7 @@ body {
 
 .user-content {
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .user-content div {
@@ -313,7 +363,7 @@ body {
 }
 
 .third img {
-  background-color: snow;
+  background-color: royalblue;
 }
 
 .last img {
