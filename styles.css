@@ -12,7 +12,7 @@ body {
 /* Sidebar Section */
 
 .sidebar {
-  width: 18%;
+  width: 20%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ body {
 /* Main Section */
 
 .main-container {
-  width: 82%;
+  width: 80%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -217,16 +217,40 @@ body {
 }
 
 .project-cards {
+  display: grid;
+  grid-template-rows: 1fr auto;
   background-color: white;
   border-radius: 8px;
+  border-left: 8px solid green;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.card-content div {
+  padding-top: 5px;
+  font-size: 12px;
+  color: grey;
+}
+
+.card-icon-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: right;
+}
+
+.card-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  justify-items: right;
 }
 
 /* Announcements & Trending */
 .side-grid {
   display: grid;
   padding: 10px;
+  gap: 1.5rem;
 }
 
 .announcements,
@@ -235,6 +259,65 @@ body {
   border-radius: 8px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.single-announcement div {
+  padding-top: 5px;
+  font-size: 12px;
+  color: grey;
+}
+
+.single-announcement {
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.single-announcement:last-child {
+  border-bottom: none;
+}
+
+.trending {
+  display: grid;
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 1.5rem;
+}
+
+.trending-user {
+  display: flex;
+  align-items: center;
+}
+
+.user-image img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-content {
+  margin-left: 1rem;
+}
+
+.user-content div {
+  margin-top: 5px;
+  font-size: 12px;
+  color: grey;
+}
+
+.first img {
+  background-color: brown;
+}
+
+.second img {
+  background-color: aqua;
+}
+
+.third img {
+  background-color: snow;
+}
+
+.last img {
+  background-color: purple;
 }
 
 /* ****************************** */
